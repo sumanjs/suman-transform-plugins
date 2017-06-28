@@ -1,0 +1,28 @@
+{
+  "name": "suman-transform-plugins",
+  "version": "0.0.101",
+  "description": "Plugins for transforming source code to target code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "suman"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanjs/suman-transform-plugins.git"
+  },
+  "keywords": [
+    "suman",
+    "testing",
+    "transform",
+    "transpile",
+    "compile",
+    "plugins",
+    "sumanjs"
+  ],
+  "author": "Olegzandr VD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumanjs/suman-transform-plugins/issues"
+  },
+  "homepage": "https://github.com/sumanjs/suman-transform-plugins#readme"
+}
