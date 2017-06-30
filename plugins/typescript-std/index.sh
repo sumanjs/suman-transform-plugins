@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "running transform process";
+echo "using plugin with name ${SUMAN_PLUGIN_NAME}";
+
 WHICH_TSC=$(which tsc);
 if [[ -z ${WHICH_TSC} ]]; then
   npm install -g typescript
@@ -9,7 +12,6 @@ WHICH_SUMAN_TOOLS=$(which suman-tools);
 if [[ -z ${WHICH_SUMAN_TOOLS} ]]; then
   npm install -g suman-tools
 fi
-
 
 for x in $(suman-tools --extract-json-array=${SUMAN_TEST_PATHS}); do
 
