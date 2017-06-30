@@ -27,9 +27,12 @@ for x in $(suman-tools --extract-json-array=${SUMAN_TEST_PATHS}); do
         echo "no need to transpile since the transpiled file is correct."
     else
         echo "we must transpile file."
-        OUT_DIR="$(dirname $(dirname ${x}))/@target"
-        tsc ${x} --outDir ${OUT_DIR}
-        chmod -R 777 ${OUT_DIR}
+        SUMAN_FILENAME=$(basename "${x}")
+        SUMAN_BABEL_DIR=$(dirname "${x}");
+        OUT_DIR="$(dirname $(dirname "${x}"))/@target"
+        mkdir -p "${OUT_DIR}"
+        (cd "${SUMAN_BABEL_DIR}" && babel "${x}" --out-file "${OUT_DIR}"/"${SUMAN_FILENAME}")
+        chmod -R 777 "${OUT_DIR}"
     fi
 
 done

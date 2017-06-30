@@ -8,3 +8,16 @@ exports.getTransformStream = function () {
 exports.getTransformPath = function(){
   return path.resolve(__dirname + '/index.sh');
 };
+
+
+exports.getListOfCompatiblePlugins = function(){
+
+  return {
+
+    '@run': [
+      'suman-run-plugins/plugins/babel-std'
+    ]
+
+  }
+
+};
