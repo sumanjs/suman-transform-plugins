@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "running transform process, using plugin with name ${SUMAN_PLUGIN_NAME}";
 
 WHICH_SUMAN_TOOLS=$(which suman-tools);
 if [[ -z ${WHICH_SUMAN_TOOLS} ]]; then
@@ -7,8 +8,6 @@ if [[ -z ${WHICH_SUMAN_TOOLS} ]]; then
 fi
 
 export PATH=${SUMAN_PROJECT_ROOT}/node_modules/.bin:${PATH}:~/.suman/global/node_modules/.bin
-
-echo "PATH in babel-std => $PATH"
 
 WHICH_BABEL=$(which babel);
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo "running transform process";
-echo "using plugin with name ${SUMAN_PLUGIN_NAME}";
+echo "running transform process, using plugin with name ${SUMAN_PLUGIN_NAME}";
 
 WHICH_TSC=$(which tsc);
 if [[ -z ${WHICH_TSC} ]]; then
