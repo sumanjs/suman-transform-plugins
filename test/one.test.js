@@ -6,6 +6,7 @@ const fs = require('fs');
 console.log(stp.getTransformPath());
 
 
-fs.createReadStream(stp.getTransformPath()).on('data', function(d){
+
+fs.createReadStream(stp.getTransformPath(),{encoding: 'utf8'}).on('data', function(d){
   console.log(d);
 });
