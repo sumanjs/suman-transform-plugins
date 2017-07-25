@@ -3,4 +3,4 @@ node_modules
 *.txt
 *.md
 *.json
-
+.DS_Store
