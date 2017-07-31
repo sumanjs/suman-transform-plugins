@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "running transform process, using plugin with name ${SUMAN_PLUGIN_NAME}";
+echo "running transform process, using plugin with name '$(basename `dirname $0`)'.";
 
 WHICH_TSC=$(which tsc);
 if [[ -z ${WHICH_TSC} ]]; then
@@ -15,15 +15,17 @@ fi
 for x in $(suman-tools --extract-json-array=${SUMAN_TEST_PATHS}); do
 
     SUMAN_TARGET="${x//@src/@target}"
-    SUMAN_TARGET=${SUMAN_TARGET%.*}.js
+    SUMAN_TARGET="${SUMAN_TARGET%.*}.js"
 
-    if [[ ${SUMAN_TARGET} -nt ${x} ]]; then
+    if [[ "${SUMAN_TARGET}" -nt "${x}" ]]; then
         echo "no need to transpile since the transpiled file is ready."
     else
         echo "we must transpile file."
         OUT_DIR="$(dirname $(dirname ${x}))/@target"
-        tsc ${x} --outDir ${OUT_DIR}
-        chmod -R 777 ${OUT_DIR}
+        echo "x => $x"
+        echo "SUMAN_TARGET => ${SUMAN_TARGET}"
+        tsc ${x} --noResolve --outDir "${OUT_DIR}" > /dev/null
+        chmod -R 777 "${OUT_DIR}"
     fi
 
 done

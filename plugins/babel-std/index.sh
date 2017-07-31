@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "running transform process, using plugin with name ${SUMAN_PLUGIN_NAME}";
+echo "running transform process, using plugin with name '$(dirname $0)'.";
 
 WHICH_SUMAN_TOOLS=$(which suman-tools);
 if [[ -z ${WHICH_SUMAN_TOOLS} ]]; then
