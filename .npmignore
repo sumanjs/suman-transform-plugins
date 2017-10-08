@@ -1,6 +1,24 @@
-.idea
+### folders
 node_modules
-*.txt
+.idea
+test
+
+### files
+.npmignore
+.gitignore
+suman.conf.js
+package-lock.json
+yarn.lock
+
+### matching files
+*.sh
 *.md
 *.json
-.DS_Store
+*.log
+*.ts
+*.yml
+*.txt
+*.DS_Store
+
+### negation
+!*.d.ts

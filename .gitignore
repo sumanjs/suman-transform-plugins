@@ -1,4 +1,12 @@
+### folders
 .idea
 node_modules
+coverage
+
+### matching
 *.log
-.DS_Store
+
+### files
+package-lock.json
+yarn.lock
+
