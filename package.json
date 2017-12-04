@@ -4,7 +4,7 @@
   "description": "Plugins for transforming source code to target code.",
   "main": "index.js",
   "scripts": {
-    "test": "suman"
+    "test": "suman test"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "sumanjs"
   ],
   "author": "Olegzandr VD",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sumanjs/suman-transform-plugins/issues"
   },
