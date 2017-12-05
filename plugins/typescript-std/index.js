@@ -10,14 +10,16 @@ exports.getTransformPath = function () {
 };
 
 exports.getListOfCompatiblePlugins = function () {
-
+  
   return {
-
-    '@run': [{
-      location: 'npm',
-      value: 'suman-run-plugins/plugins/typescript-std'
-    }]
-
+    
+    '@run': [
+      {
+        location: 'npm',
+        value: 'suman-run-plugins/plugins/typescript-std'
+      }
+    ]
+    
   }
-
+  
 };
