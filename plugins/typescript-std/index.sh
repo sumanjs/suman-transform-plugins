@@ -2,13 +2,13 @@
 
 echo "running transform process, using plugin with name '$(basename `dirname $0`)'.";
 
-WHICH_TSC=$(which tsc);
-if [[ -z ${WHICH_TSC} ]]; then
+which_tsc="$(which tsc)";
+if [[ -z ${which_tsc} ]]; then
     npm install -g typescript
 fi
 
-WHICH_SUMAN_TOOLS=$(which suman-tools);
-if [[ -z ${WHICH_SUMAN_TOOLS} ]]; then
+which_suman_tools="$(which suman-tools)";
+if [[ -z ${which_suman_tools} ]]; then
     npm install -g suman-tools
 fi
 
