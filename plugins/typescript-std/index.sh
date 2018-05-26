@@ -26,7 +26,7 @@ for x in $(suman-tools --extract-json-array=${SUMAN_TEST_PATHS}); do
         echo "x => $x"
         echo "SUMAN_TARGET => ${SUMAN_TARGET}"
         echo "OUT_DIR => ${OUT_DIR}"
-        tsc ${x} --noResolve --outDir "${OUT_DIR}" # > /dev/null
+        tsc ${x} --target 'ES6' --module 'CommonJS' --noResolve --outDir "${OUT_DIR}" # > /dev/null
         chmod -R 777 "${OUT_DIR}"
     fi
 
