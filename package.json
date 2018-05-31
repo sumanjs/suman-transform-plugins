@@ -1,6 +1,6 @@
 {
   "name": "suman-transform-plugins",
-  "version": "0.0.105",
+  "version": "0.0.106",
   "description": "Plugins for transforming source code to target code.",
   "main": "index.js",
   "scripts": {
