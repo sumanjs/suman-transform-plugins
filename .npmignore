@@ -11,14 +11,9 @@ suman.conf.js
 yarn.lock
 
 ### matching files
-*.sh
 *.md
 *.json
 *.log
-*.ts
 *.yml
 *.txt
 *.DS_Store
-
-### negation
-!*.d.ts
