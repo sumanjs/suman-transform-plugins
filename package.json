@@ -2,7 +2,7 @@
   "name": "suman-transform-plugins",
   "version": "0.0.106",
   "description": "Plugins for transforming source code to target code.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "suman test"
   },
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/sumanjs/suman-transform-plugins/issues"
   },
-  "homepage": "https://github.com/sumanjs/suman-transform-plugins#readme"
+  "homepage": "https://github.com/sumanjs/suman-transform-plugins#readme",
+  "devDependencies": {
+    "@types/node": "^10.11.3"
+  }
 }
