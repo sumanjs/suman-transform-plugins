@@ -2,12 +2,12 @@
 .idea
 node_modules
 coverage
+.nyc_output
 .vscode
 
 ### matching
 *.log
 
 ### files
-package-lock.json
 yarn.lock
 
