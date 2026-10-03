@@ -11,3 +11,7 @@ coverage
 ### files
 yarn.lock
 
+
+# Local temporary directories and repository-owned worktrees
+tmp/
+temp/
